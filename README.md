@@ -5,7 +5,7 @@
 Everything is containerized from the frontend to backend. So all you need is Docker installed, and then you can run :
 
 ```
-docker-compose up --build
+docker-compose up -d --build
 ```
 
 And your app will be up on the *port 8080* !
