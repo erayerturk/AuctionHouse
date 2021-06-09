@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+  be:
+    build: scopic_backend
+    volumes:
+      - ./scopic_backend:/app
+    ports:
+      - "8000:8000"
+  fe:
+    build: scopic_frontend
+    environment:
+      - VUE_APP_API=http://be:8000
+    ports:
+      - "8080:8080"
+    depends_on:
+      - be
